@@ -1,0 +1,67 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #222; /* Black background */
+}
+
+.calculator {
+    width: 300px;
+    background-color: #333; /* Dark gray background for calculator */
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Subtler shadow for dark theme */
+    overflow: hidden;
+}
+
+.display {
+    background-color: #222; /* Black display background */
+    padding: 20px;
+    font-size: 24px;
+    text-align: right;
+    color: #fff; /* White text for better contrast */
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 10px;
+}
+
+button {
+    background-color: #444; /* Darker gray for buttons */
+    border: none;
+    border-radius: 5px;
+    padding: 15px;
+    font-size: 16px;
+    cursor: pointer;
+    color: #fff; /* White text for buttons */
+    transition: background-color 0.2s ease-in-out;
+}
+
+button:hover {
+    background-color: #333; /* Darker shade on hover */
+}
+
+.buttons button:nth-child(1),
+.buttons button:nth-child(5),
+.buttons button:nth-child(9),
+.buttons button:nth-child(13),
+.buttons button:nth-child(17) {
+    background-color: #555; /* Slightly lighter gray for operator buttons */
+}
+
+.buttons button:nth-child(4),
+.buttons button:nth-child(8),
+.buttons button:nth-child(12),
+.buttons button:nth-child(16),
+.buttons button:nth-child(20) {
+    background-color: #333; /* Same dark gray for function buttons (equals, clear) */
+}
+
+.buttons button:nth-child(1) { /* Red for clear button */
+    color: #f00;
+}
